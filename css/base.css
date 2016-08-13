@@ -1,0 +1,92 @@
+*
+  {margin:0 auto;
+   padding:0
+  }
+html
+  {font-size:62.5%;
+   font-family:"微软雅黑"
+   max-width:1920px;
+   min-width:1200px
+  }
+  /*  基本样式*/
+  /*  头部   */
+.hd_top
+  {background-color:#FFF;
+   overflow:hidden;
+   width:80%;
+   color:#29b078;
+   font-size:1.4rem;
+   line-height:3.9rem;
+   margin:auto
+  }
+.hd_top img
+  {float:right;
+   padding:10px 0
+  }
+/*  导航栏  */
+.nav
+  {background-color:#29b078;
+   overflow:hidden;
+   margin:auto
+  }
+.logo
+  {padding-left:10%;
+   padding-top:2%;
+   float:left;
+  }
+.nav ul
+  {list-style:none}
+.nav ul li
+  {float:right;
+   box-sizing:border-box;
+   height:96px;
+   width:100px;
+   text-align:center;
+   font-size:1.7rem;
+   color:#FFF;
+   line-height:96px;
+   border-bottom:4px solid transparent
+  }
+.nav ul li:hover
+  {border-bottom:4px solid #FFF}
+
+/*----------------------页脚部分-----------------*/
+
+.footer
+  {background-color:#29b078;
+  }
+.footer p
+  {font-size:1.5rem;
+   color:#FFF;
+  }
+.footer a
+  {color:#fff;
+   font-size:1.3rem;
+   text-decoration:none
+  }
+.footer li
+  {float:left;
+   list-style:none;
+   padding-left:5%;
+   padding-bottom:5%
+  }
+.ft_left
+  {width:200px;
+   display:inline-block;
+   padding:5% 10% 2% 10%
+  }
+.ft_left p
+  {padding-bottom:30%}
+.ft_right
+  {width:200px;
+   display:inline-block
+  }
+.ft_right p
+  {padding-bottom:15%}
+.code
+  {float:right;
+   width:200px;
+   padding:5% 5% 0 0
+  }
+.ft_bottom p
+  {text-align:center}

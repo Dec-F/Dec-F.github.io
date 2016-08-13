@@ -1,0 +1,200 @@
+
+@keyframes pic_1 {
+    0%{ opacity: 1;}
+    20%{ opacity: 1;}
+    30%{ opacity: 0;}
+    90%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+/*图片轮播*/
+@keyframes pic_2 {
+    0%{ opacity: 0;}
+    20%{ opacity: 0;}
+    30%{ opacity: 1;}
+    50%{ opacity: 1;}
+    60%{ opacity: 0;}
+	100%{ opacity: 0;}
+}
+
+/*图片轮播*/
+@keyframes pic_3 {
+    0%{ opacity: 0;}
+    50%{ opacity: 0;}
+    60%{ opacity: 1;}
+    90%{ opacity: 1;}
+    100%{ opacity: 0;}
+}
+/*主框架*/
+
+.banner{
+    width: 100%;
+    height: 30%;
+    position: relative;
+}
+
+.first{
+	animation:pic_1 15s infinite;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.second
+  {animation:pic_2 15s infinite;
+   list-style: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+  }
+.third
+  {animation:pic_3 15s infinite;
+   list-style: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+  }
+
+.banner img
+  {width:100%}
+.banner ul:hover li
+  {animation-play-state:paused}
+  
+  
+/* --------------------------------内容部分----------------------------  */
+.content
+  {background-color:#fafafa}
+.content li
+  {float:left;
+   text-align:center;
+   list-style:none;
+  }
+h2,h3
+  {font-size:1.8rem;
+   line-height:400%;
+   text-align:center
+  }
+span
+  {color:#999999;
+   font-size:1.3rem;
+   display:inline-block;
+   vertical-align:middle
+  }
+.point ul li
+  {width:21%;
+   margin-right:5%
+  }
+
+.point p
+  {font-size:1.4rem;
+   color:#999999
+  }
+.point
+  {width:80%;
+   padding-top:5%
+  }
+.amount
+  {padding-top:5%;
+   display:inline-block;
+   padding-left:2%;
+   border-left:1px dashed #dedede
+  }
+.amount span
+  {color:#29b078;
+  }
+.amount div
+  {padding-bottom:10%}
+  
+ /* --------------  如何学习 --------------------- */
+ 
+.study
+  {text-align:center;
+   overflow:hidden;
+   margin-top:10%;
+   width:80%
+  }
+.study h2
+  {margin-bottom:3%}
+
+.study li
+  {float:left;
+  list-style:none;
+  width:25%;
+  }
+.number
+  {display:inline-block;
+   color:#29b078;
+   font-size:1.5rem;
+   text-align:center;
+   line-height:72px;
+   width:72px;
+   background-color:#fff;
+   border-radius:72px;
+   box-shadow: 2px 2px 6px #999999;
+  }
+.study img
+  {vertical-align:middle;
+   margin:0 10px;
+  }
+.study span
+  {width:45%;
+  }
+.study ul
+  {overflow:hidden;
+   padding-bottom:10%
+  }
+  
+  /* ------------------------  优秀学员展示 ------------------  */
+  
+.show
+  {overflow:hidden;
+   width:80%
+  }
+.show li
+  {width:17%;
+   background-color:#FFF;
+   border-radius:5px;
+   box-shadow: 0 0 6px #C2C2C2;
+   padding:2%;
+   margin-left:3%
+  }
+.show h2
+  {padding-bottom:3%}
+
+
+.business
+  {width:80%;
+  overflow:hidden;
+  padding:10% 0
+  
+  }
+.business h2
+  {margin-bottom:3%}
+
+.business li
+  {width:19%;
+   background-color:#FFF;
+  }
+.business li:hover
+  {box-shadow: 0 2px 6px #999999;
+   border:1px solid #999999
+  }
+
+/*-------------------------友情链接--------------------------*/
+
+.link
+  {width:80%;
+   overflow:hidden;
+   padding-bottom:3%
+  }
+.link li
+  {float:left;
+   width:10%;
+   color:#999999
+  }
+.link a
+  {color:#999999;
+   font-size:1.3rem;
+   text-decoration:none
+  }
+

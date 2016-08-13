@@ -35,7 +35,8 @@
     top: 0;
     left: 0;
 
-    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+            transition: opacity 2s;
 
     opacity: 0;
 }
@@ -105,11 +106,15 @@ h3
     width: 100%;
     height: 100%;
 
-    transition: opcity 2s,transform 2s;
-    transform: rotateY(180deg);
+    -webkit-transition: opcity 2s,-webkit-transform 2s;
+            transition: opcity 2s,-webkit-transform 2s;
+            transition: opcity 2s,transform 2s;
+            transition: opcity 2s,transform 2s,-webkit-transform 2s;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 
     opacity: 0;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #333;
 }
 .skills .hide ul
@@ -124,7 +129,8 @@ h3
 }
 .skills .hide:hover
 {
-    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
 
     opacity: .6;
 }
@@ -146,9 +152,13 @@ h3
     width: 150px;
     margin: 0 auto;
     padding: 1% 0;
-
+    border:1px solid #fff;
     border-radius: 20px;
-    background-color: #4bbff5;
+    /*background-color: #4bbff5;*/
+}
+.link p
+{
+    color: #fff;
 }
 .link a
 {
@@ -156,7 +166,7 @@ h3
 }
 .link:hover
 {
-    box-shadow: 0 5px 5px #f7f7f7;
+    box-shadow: 0 5px 5px #fff;
 }
 
 /*--   第四屏   --*/
@@ -171,20 +181,21 @@ h3
     position: relative;
 
     width: 80%;
-    margin-left: 5%;
+    margin-left: 10%;
 
     border-left: 3px solid #828282;
 }
-
+.exp_nav{margin: 0;padding: 0;display: inline-block; }
 .exp_content
 {
     padding-left: 3%;
+
 }
 .dot
 {
     position: relative;
     position: absolute;
-    left: -10px;
+    left: -11px;
 
     display: inline-block;
 
@@ -203,20 +214,23 @@ h3
 
     padding-left: 10px;
 }
+.exp_content .spa
+{margin-top: 2%;}
 .exp_content img
 {
     display: inline-block;
-	border-radius:10px;
 
     width: 100px;
 
     vertical-align: top;
+
+    border-radius: 10px;
 }
 .exp_content ul
 {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 150%;
-
+   
     display: inline-block;
 
     padding-left: 5%;

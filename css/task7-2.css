@@ -1,0 +1,86 @@
+main
+  {background-color:#fafafa;
+   font-size:1.4rem;
+   width:100%;
+  }
+main a
+  {text-decoration:none;
+   color:#29b078;
+   padding-left:5px
+  }
+.position
+  {width:80%;
+   margin:0 auto;
+   padding:2% 0
+  }
+.position h2
+  {display:inline-block}
+.home
+  {color:#000}
+.nav2
+  {background-color:#FFF;
+   text-align:center;
+   display:inline-block;
+   width:18%;
+   margin-left:10%;
+   vertical-align:top
+  }
+.nav2 h2
+  {padding:10% 0;
+   border-bottom:1px solid #D6D6D6
+  }
+.nav2 ul
+  {width:90px;
+   text-align:left;
+   font-size:1.4rem;
+   line-height:300%;
+   list-style-type:none;
+   padding:10% 0
+  }
+  
+.nav2 li:before  /*--li前可控圆点--*/
+  {content:"";
+   display:inline-block;
+   width:10px;                
+   height:10px;
+   border-radius:20px;
+   border:1px solid #ff640d;
+  }
+main li h2,a:hover
+  {color:#f9a372}
+main li a:active
+  {color:#f9a372}
+  /*----------------导航部分  结束-----------------*/
+  
+.content
+  {display:inline-block;
+   width:63%;
+   margin-left:2%;
+   background-color:#FFF;
+  }
+.outline
+  {overflow:hidden;
+   padding:5% 3% 3% 5%;
+   margin-bottom:3%;
+   border-bottom:1px solid #D6D6D6
+  }
+.outline img
+  {float:left}
+.outline span
+  {display:inline-block;
+   width:80%;
+   line-height:200%;
+  }
+.details 
+  {padding-left:6%;
+   line-height:200%;
+   text-indent:2em;
+   padding-bottom:5%;
+   padding-right:3%
+  }
+  
+
+
+
+	
+
