@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Microsoft YaHei', serif;
+}
+
+.wrap {
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+header {
+    overflow: hidden;
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    background-color: #29bde0;
+}
+
+.hd_left {
+    float: left;
+    padding-left: 12px;
+}
+
+.hd_right {
+    float: right;
+    padding-right: 12px;
+}
+
+header h2 {
+    font-size: 3rem;
+    display: inline-block;
+}
+
