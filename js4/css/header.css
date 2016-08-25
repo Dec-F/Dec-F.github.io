@@ -1,0 +1,51 @@
+@charset "utf-8";
+.header, .content, .footer {
+    background: #29bde0;
+}
+/*页面头部*/
+.header{
+    overflow:hidden;
+}
+
+/*Left*/
+.back{
+    float: left;
+    width: 46px;
+    height: 62px;
+    background: url("../images/back.png") 20px 11px no-repeat;
+}
+
+/*Right*/
+.question{
+    float: right;
+    width: 66px;
+    height: 62px;
+    background: url("../images/close.png") 0 12px no-repeat;
+}
+/*H1*/
+.header h1{
+    font-size: 34px;
+    line-height: 62px;
+    color: white;
+    text-align: center;
+}
+
+/*页尾部分*/
+
+.footer{
+    position: fixed;
+    max-width: 640px;
+    width: 100%;
+    bottom: 0;
+}
+.footer button{
+    display: block;
+    margin: 4rem auto 6rem auto;
+    width: 76%;
+    font-size: 4rem;
+    line-height:2.2;
+    color: white;
+    text-align: center;
+    background: #fbb435;
+
+}
