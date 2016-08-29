@@ -1,0 +1,52 @@
+@charset "utf-8";
+.content{
+    background: #29bde0;
+    padding: 13% 0 9% 0;
+    border-top:1px #7ed4eb solid ;
+}
+.box{
+    position: relative;
+    margin: auto;
+    width: 72%;
+    height: 656px;
+    text-align: center;
+    background: #ffedc5;
+    border: 6px white solid;
+    box-sizing: border-box;
+}
+.box p{
+    font-size: 4rem;
+}
+.box img{
+    margin-bottom: 3rem;
+}
+.playerName{
+    position: relative;
+    top: -33px;
+    margin: auto;
+    width: 67px;
+    height: 67px;
+    color: #f56b81;
+    line-height: 61px;
+    background: white;
+    border-radius: 50%;
+    border: 3px #ffedc5 solid;
+}
+.status{
+    line-height: 6rem;
+    color: #29bde0;
+}
+button{
+    display: block;
+    margin:18% auto 9.3% auto;
+    width: 75%;
+    font-size: 4rem;
+    line-height: 8.5rem;
+    color: white;
+    text-align: center;
+    background: #fbb435;
+}
+a{
+    display: block;
+    width: 100%;
+}
