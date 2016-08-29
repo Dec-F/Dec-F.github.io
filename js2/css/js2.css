@@ -1,0 +1,120 @@
+@charset "utf-8";
+/*页面背景颜色*/
+.main{
+    padding: 20px 17px;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+.main>div{
+    margin: 9px 0;
+    background: #ffffff;
+}
+/*玩家角色块*/
+.player{
+    width: 100%;
+    overflow: hidden;
+}
+/*块标题*/
+.player .title{
+    display: table;
+    float: left;
+    padding: 0 5%;
+    width: 20%;
+    height: 450px;
+    text-align: center;
+    border-right: 1px #d9d9d9 solid;
+    box-sizing: border-box;
+}
+.player .title h2{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3.6rem;
+}
+/*角色身份/设置按钮配置*/
+.allocation,
+.player button{
+    float: right;
+    width: 80%;
+}
+.allocation{
+    height: 390px;
+    font-size: 2.6rem;
+    color: #a1a1a1;
+    border-bottom: 1px #d9d9d9 solid;
+    box-sizing: border-box;
+    overflow: auto;
+}
+#role li{
+    font-size: 2.6rem;
+    color: #a1a1a1;
+}
+.player button{
+    height: 60px;
+    font-size: 2.8rem;
+    line-height: 60px;
+    color: #29bde0;
+    background: #ffffff;
+}
+
+/*水民词组*/
+.main-2{
+    padding: 0 25px 23px 25px;
+}
+.main-2 input{
+    margin-bottom: 7px;
+    width: 100%;
+    font-size: 2.8rem;
+    line-height: 88px;
+    color: #d7d7d7;
+    border: none;
+    outline:none;
+    border-bottom: 1px #f0f0f0 solid;
+    box-sizing: border-box;
+}
+
+/*玩家人数设置*/
+.main-3{
+    padding: 0 30px;
+}
+.main-3 div:first-child{
+    font-size: 2.8rem;
+    line-height: 7.5rem;
+    color: black;
+}
+.main-3 div:first-child input{
+    width: 60px;
+    height: 42px;
+    font-size: 3.4rem;
+    color: #fab344;
+    background: #f4f5f5;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.main-3 div:last-child{
+    padding: 35px 14px;
+}
+
+.main-3 div:last-child span{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+    line-height: 24px;
+    color: #fab344;
+    text-align: center;
+    border: 1px #d9d9d9 solid;
+}
+button.footer{
+    width: 100%;
+    font-size: 4rem;
+    line-height: 9rem;
+    color: white;
+    background: #fab344;
+}
+@media (max-width: 420px) {
+    html{
+        font-size: 45%;
+    }
+}
+

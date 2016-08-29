@@ -1,0 +1,86 @@
+@charset "utf-8";
+.main{
+    background: #29bde0;
+    overflow: hidden;
+}
+
+.win{
+    margin:32px auto 0 auto;
+    width: 55%;
+}
+.main{
+    margin-bottom: 25%;
+
+}
+.main>p{
+    font-size: 3.3rem;
+    font-weight:bold;
+    line-height: 4.1rem;
+    color: #ffc865;
+}
+
+.main>p,.result,.process ul{
+    margin: auto;
+    width: 75%;
+}
+
+.result{
+    font-size: 2.6rem;
+    color: white;
+}
+/*角色数量设置*/
+.result ul{
+    overflow: hidden;
+}
+.result ul li{
+    float: left;
+    width:33%;
+}
+/*游戏过程*/
+.process>li{
+    padding-bottom: 22px;
+    border-top:1px #ddd solid ;
+    border-bottom:1px #ddd solid ;
+    background: white;
+}
+.process ul li{
+    font-size: 2.6rem;
+    line-height: 4rem;
+    color: #a6a6a6;
+}
+.process ul li:first-child{
+    font-size: 3rem;
+    line-height: 5.4rem;
+}
+.process ul li:first-child span{
+    float: right;
+    font-size: 2rem;
+    color: #c7c7c7;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    max-width: 640px;
+    width: 100%;
+    background: rgba(41,193,243,0.6);
+    overflow: hidden;
+}
+
+.footer a{
+    margin: 4%;
+    width: 42%;
+    font-size: 4rem;
+    line-height: 2.1;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    /*opacity: 1;*/
+}
+.footer a:nth-child(1){
+    float: left;
+    background: #f66f6f;
+}
+.footer a:nth-child(2){
+    float: right;
+    background: #fbb435;
+}
