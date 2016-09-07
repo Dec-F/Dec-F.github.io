@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+html{
+    font-size: 62.5%;
+    font-family: Microsoft YaHei,Serif;
+}
+body{
+    min-width: 320px;
+    margin: 0 auto;
+    max-width: 680px;
+}
+.container{
+    background-color: #c6c6c4;
+    padding: 30px 5%;
+}
+.test,.boot{
+    background-color: white;
+    padding:0 30px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+ul{
+    list-style: none;
+}
+li{
+    float: left;
+    width: 30%;
+}
+h2{
+    color: black;
+    font-size: 3rem;
+    padding: 20px;
+}
+h3{
+    color: #5a5a58;
+    font-size: 2.5rem;
+}
+a{
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    font-size: 2.2rem;
+    padding: 5px;
+    margin: 10px 5px;
+    background-color:#1cb375 ;
+}
+a:hover{
+    background-color: #4b8bff;
+    color: #fffd1a;
+}
+.hope{
+    background-color: white;
+    padding: 30px;
+}
+.hope p{
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #5a5a58;
+    margin-bottom: 20px;
+}
+
