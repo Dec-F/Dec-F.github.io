@@ -1,0 +1,74 @@
+body{
+    min-width: 320px;
+    font-size: 62.5%;
+    font-family: "Microsoft YaHei", serif;
+    color: white;
+    margin: 0 auto;
+    background: #eff0f4;
+    max-width: 680px
+}
+a {color:white;}
+
+.top{
+    width: 100%;
+    background: #5fc0cd;
+    position: relative;
+}
+.top h1{
+    margin: 0;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.left{
+    font-size: 1.3rem;
+    float:left;
+    margin: 2% 1% 1% 1%;
+}
+.right{
+    font-size: 1.3rem;
+    margin: 2% 1% 1% 1%;
+    float: right;
+    color: white;
+
+}
+input{
+    background: white;
+    border: none;
+    border-left: 1px solid #eaedee;
+    width: 60%;
+    text-indent: 1.5rem;
+    margin: 0.5rem;
+    font-size: 1.3rem;
+    outline:none;
+    vertical-align: middle;
+}
+.input{
+    width: 100%;
+    background: white;
+    margin: 1rem 0;
+}
+button{
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2%;
+    background: #5fc0cd;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+
+}
+label{
+    padding: 0;
+    margin: 0;
+}
+label img{
+    max-width: 100%;
+    padding: 2% 1% 2% 3%;
+    vertical-align: middle;
+}
+.forget{
+    float: right;
+    color: #5fc0cd;
+    font-size: 1.3rem;
+}

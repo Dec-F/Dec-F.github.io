@@ -1,0 +1,197 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Microsoft YaHei", serif;
+}
+.box{
+    position: relative;
+    margin: auto;
+    max-width: 640px;
+    min-width: 320px;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+/*页面底色设置*/
+.header,.main,.footer{
+    background: #29bde0;
+}
+.header{
+    padding: 20px;
+}
+.header-left{
+    float: left;
+    width: 39px;
+    height: 40px;
+    background: url("images/6-2-1.png") no-repeat;
+    background-size: 39px 40px;
+}
+.header-right{
+    float: right;
+    width: 36px;
+    height: 36px;
+    background: url("images/6-2-2.png") no-repeat;
+    background-size: 36px 36px;
+ }
+.header h1{
+    font-size: 3.4rem;
+    line-height: 3.4rem;
+    color: white;
+    text-align: center;
+}
+
+/*对话框样式设置*/
+.hint{
+    position: relative;
+    padding: 27px 70px 27px 47px;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    background: #b9e9f5;
+}
+.hint button{
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    width: 52px;
+    height: 52px;
+    border: 0;
+    background: url("images/6-2-3.png") 0 0 no-repeat;
+    background-size: 52px 52px;
+    cursor: pointer
+}
+/*对话框下方三角形*/
+.trilateral{
+    /*position: relative;*/
+    /*left: 70px;*/
+    width: 0;
+    height: 0;
+    border-top: 12px #b9e9f5 solid;
+    border-right: 6px transparent solid;
+    border-left: 6px transparent solid;
+    border-bottom: 6px transparent solid;
+}
+.hint2{
+    position: relative;
+    padding-left: 70px;
+    padding-bottom: 44px;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: white;
+}
+.main{
+    margin-bottom: 29%;
+}
+/*方块图形*/
+.game{
+    /*margin: auto;  右侧还应有滑动条，不会实现，暂且ul先居中*/
+    max-width:620px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.game>li{
+    float: left;
+    margin: 0 5.5% 3.5% 5.5%;
+    width:22%;
+}
+/*方框外层*/
+.role{
+    border: 5px white solid;
+    margin-bottom: 20px;
+}
+/*水民*/
+.role div:first-child{
+    padding: 30% 0 30% 0;
+    font-size: 3rem;
+    line-height: 3rem;
+    background: #f5c97b;
+}
+/*序号*/
+.role div:nth-child(2){
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    color: white;
+    background: #83b09a;
+
+}
+/*!*雪碧图*!*/
+.sprite{
+    opacity: 0;
+    overflow: hidden;
+}
+
+.game li:hover .sprite{
+    opacity: 1;
+}
+
+.sprite li{
+    float: left;
+    width: 23%;
+    height: 30px;
+    margin-right:2%;
+    background: url("images/sprite.png") 0 0 no-repeat;
+    background-size: 400%;
+}
+
+.sprite li:nth-child(2){
+    background-position:34% 0;
+}
+.sprite li:nth-child(3){
+    background-position:66% 0;
+}
+.sprite li:nth-child(4){
+    margin-right:0;
+    background-position:100% 0;
+}
+
+
+/*底部*/
+.footer{
+    position: fixed;
+    max-width: 640px;
+    width: 100%;
+    bottom: 0;
+}
+.footer a{
+    display: block;
+    margin: 4rem auto 6rem auto;
+    width: 76%;
+    font-size: 4rem;
+    line-height:2.2;
+    color: white;
+    text-align: center;
+    background: #fbb435;
+
+}
+
+
+@media (min-width: 440px) and (max-width:520px) {
+    html{
+        font-size: 50%;
+    }
+
+}
+@media (min-width: 373px ) and (max-width: 440px){
+    html{
+        font-size: 40%;
+    }
+
+
+}
+@media (max-width: 373px){
+    html{
+        font-size: 40%;
+    }
+
+}

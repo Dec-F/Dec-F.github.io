@@ -1,0 +1,30 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body {
+    font-family: "Microsoft YaHei", serif;
+}
+ul{
+    overflow: hidden;
+}
+.wrap{
+    margin: auto;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+}
+a:link,a:visited{
+    text-decoration:none;
+}

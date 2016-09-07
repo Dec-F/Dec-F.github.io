@@ -1,0 +1,148 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Microsoft YaHei", serif;
+    font-weight: 300;
+}
+.box{
+    position: relative;
+    margin: auto;
+    max-width: 640px;
+    min-width: 320px;
+    background: #29bde0;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+.main>p,.result,.process ul{
+    margin: auto;
+    width: 75%;
+}
+.header{
+    height: 74px;
+    border-bottom:1px #74d4eb solid ;
+    background:transparent ;
+}
+.header a:first-child{
+    float: left;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 51px;
+    height: 42px;
+    background: url("images/6-3.png") 0 0 no-repeat;
+}
+.header a:nth-child(2){
+    float: right;
+    position: relative;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url("images/6-3.png") -51px 0 no-repeat;
+}
+.header h1{
+    font-size: 3.4rem;
+    line-height: 7.4rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+.win{
+    margin:32px auto 0 auto;
+    width: 55%;
+}
+.main{
+    margin-bottom: 25%;
+
+}
+.main>p{
+    font-size: 3.3rem;
+    font-weight:bold;
+    line-height: 4.1rem;
+    color: #ffc865;
+}
+/*游戏结果*/
+.result{
+    font-size: 2.6rem;
+    color: white;
+}
+/*角色数量设置*/
+.result ul{
+    overflow: hidden;
+}
+.result ul li{
+    float: left;
+    width:33%;
+}
+/*游戏过程*/
+.process>li{
+    padding-bottom: 22px;
+    border-top:1px #ddd solid ;
+    border-bottom:1px #ddd solid ;
+    background: white;
+}
+.process ul li{
+    font-size: 2.6rem;
+    line-height: 4rem;
+    color: #a6a6a6;
+}
+.process ul li:first-child{
+    font-size: 3rem;
+    line-height: 5.4rem;
+}
+.process ul li:first-child span{
+    float: right;
+    font-size: 2rem;
+    color: #c7c7c7;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    max-width: 640px;
+    width: 100%;
+    background: rgba(41,193,243,0.6);
+    overflow: hidden;
+}
+
+.footer a{
+    margin: 4%;
+    width: 42%;
+    font-size: 4rem;
+    line-height: 2.1;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    /*opacity: 1;*/
+}
+.footer a:nth-child(1){
+    float: left;
+    background: #f66f6f;
+}
+.footer a:nth-child(2){
+    float: right;
+    background: #fbb435;
+}
+@media (min-width:400px )and (max-width: 500px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width: 400px) {
+    html{
+        font-size: 40%;
+    }
+}
+
+
