@@ -32,7 +32,8 @@ ul{
 }
 li{
     float: left;
-    width: 30%;
+    width: 33%;
+    box-sizing:border-box;
 }
 h2{
     color: black;
