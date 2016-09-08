@@ -3,6 +3,11 @@
     padding: 0;
     text-align: center;
 }
+@media screen and (max-width: 480px){
+html{
+    font-size: 44%!important;
+}
+} 
 html{
     font-size: 62.5%;
     font-family: Microsoft YaHei,Serif;
