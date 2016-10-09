@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(function () {
+            $('#dowebok').fullpage({
+                sectionsColor: ['#2794EB', "#BFF8D4", '#47D6B6', '#17B3C1', '#EE9494'],
+                navigation: true,
+                navigationTooltips: ["个人情况", "专业技能", "关于我", "demo展示", "感谢"]
+            });
+        });
+        $(function () {
+            $('.dowebok').flipTimer();
+        });
+    </script>
+</head>
+
+<body>
+
+<div id="dowebok">
+    <div class="section">
+        <div class="personal">
+            <div class="head">
+                <img class="hide" src="images/529eb96fda74045e2b2e2be20dda261.jpg">
+                <img src="images/390774115870681738.jpg"></div>
+            <div class="details">
+                <ul>
+                    <li>
+                        <h2>范学会</h2>
+                    </li>
+                    <li>
+                        <h3>WEB前端工程师</h3>
+                    </li>
+                    <li>现居地：杭州市西湖区</li>
+                    <li>生日：1991年12月19日</li>
+                    <li>电话：17703668430</li>
+                    <li>邮箱：463428221@qq.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="skills">
+            <h2>Keep moving，不断前行</h2>
+            <ul class="icon">
+                <li class="css show">
+                    <img src="images/icon-03.png">
+                    <div class="hide">
+                        <ul class="sk_de">
+                            <li>熟练运用css及css3新属性</li>
+                            <li>注重代码兼容性，对各浏览器兼容性有深刻理解</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="html show">
+                    <img src="images/icon-05.png">
+                    <div class="hide">
+                        <ul class="sk_de">
+                            <li>深刻理解Web标准</li>
+                            <li>熟练运用html标签</li>
+                            <li>熟练掌握html5新特性</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="js show">
+                    <img src="images/icon-06.png">
+                    <div class="hide">
+                        <ul class="sk_de">
+                            <li>对JavaScript基础知识的掌握，包括基本语法以及DOM操作</li>
+                            <li>对 JavaScript 原型继承，闭包等难点有自己的理解</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="jq show">
+                    <img src="images/icon-02.png">
+                    <div class="hide">
+                        <ul class="sk_de">
+                            <li>掌握jQery的应用</li>
+                            <li>对基于jQery的多种插件的应用</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="boot show">
+                    <img src="images/icon-07.png">
+                    <div class="hide">
+                        <ul class="sk_de">
+                            <li>掌握BootStrap的应用</li>
+                            <li>对基于BootStrap的多种插件的应用</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="aj show">
+                    <img src="images/icon-04.png">
+                    <div class="hide">
+                        <ul class="sk_de">
+                            <li>对异步JavaScript和XML的概念有大致了解</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="section">
+        <div class="exp">
+            <h2>一路走向前端</h2>
+            <div class="exp_main">
+                <div class="exo_updata">
+                    <div class="exp_nav">
+                        <div class="dot"></div>
+                        <p>2016.4-至今</p>
+                    </div>
+                    <div class="exp_content">
+                        <img class="spa" src="images/updata.jpg">
+                        <ul>
+                            <li>就职于浙江璞墨科技</li>
+                            <li>负责跟进客户需求，编写满足客户的页面和交互</li>
+                            <li>对客户的产品进行维护</li>
+                            <li>熟练使用原生javascript，及jQery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exo_now">
+                    <div class="exp_nav">
+                        <div class="dot"></div>
+                        <p>2015.7-2016.4</p>
+                    </div>
+                    <div class="exp_content">
+                        <img class="spa" src="images/logo2.jpg">
+                        <ul>
+                            <li>就职于中铁七局五公司哈尔滨地铁项目部</li>
+                            <li>负责现场技术和工程质量</li>
+                            <li>隧道方向参数的计算，修正。</li>
+                            <li>熟练使用CAD等工程制图软件</li>
+                            <li>熟练使用Excel表格工具对大量数据进行计算和处理</li>
+                            <li>期间自学Web前端课程。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exo_college">
+                    <div class="exp_nav">
+                        <div class="dot"></div>
+                        <p>2015年7月</p>
+                    </div>
+                    <div class="exp_content">
+                        <img src="images/logo1.jpg">
+                        <ul>
+                            <li>就读于吉林建筑大学机械及自动化专业</li>
+                            <li>大学期间学习了C语言，软件技术基础，单片机系统原理等相关课程</li>
+                            <li>在全国机械设计大赛上以“智能课桌”赢得了二等奖，使用并编写了简单的控制程序</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="works">
+            <h2>练习作品</h2>
+            <ul>
+                <li>
+                    <a href="https://strongfanfan.github.io/task7-1.html">
+                        <img src="images/logo.png">
+                        <p>IT修真院</p>
+                        <p class="spa">纯HTML5和CSS3实现轮播和布局的demo</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://strongfanfan.github.io/lenovo/lenvono.html">
+                        <img src="images/lenovo.png">
+                        <p>Lenovo首页</p>
+                        <p class="spa">仿写的联想首页<br/>&nbsp;<br/>&nbsp; </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://strongfanfan.github.io/task10.html">
+                        <img src="images/logo.png">
+                        <p>IT修真院</p>
+                        <p class="spa">基于Bootstrap框架和jQ制作布局的demo</p>
+                    </a>
+                </li>
+            </ul>
+
+            <p>更多demo，还在更新</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="thanks">
+            <h2>感谢</h2>
+            <ul>
+                <li>感谢您百忙之中看完了我的简历</li>
+                <li>希望能得到一个机会可以成为</li>
+                <li>百万前端攻城狮中的一员</li>
+                <li class="end">不忘初心,不断前行</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
