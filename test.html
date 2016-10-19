@@ -4,47 +4,60 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        div {
-            margin: 0 auto;
-            border: 1px solid white;
+        img {
+            position: absolute;
+        }
+
+        .container {
+            position: relative;
+            margin: auto;
+            width: 400px;
         }
 
         .box1 {
             width: 300px;
             height: 300px;
-            background-color: #2aabd2
+            top: 50px;
         }
 
         .box2 {
             width: 200px;
             height: 200px;
-            background-color: #449d44
+            top: 100px;
+            margin-left: 50px;
         }
 
         .box3 {
             width: 100px;
             height: 100px;
-            background-color: #d43f3a
+            top: 150px;
+            margin-left: 100px;
+        }
+
+        img:hover {
+            border: #1ab2c1 solid 1px;
+            opacity: 0.8;
         }
     </style>
 </head>
-<body>
-<div class="box1">
-    <div class="box2">
-        <div class="box3"></div>
-    </div>
+<div class="container">
+    <img src="/r6.jpg" alt="1" class="box1">
+    <img src="images/r7.jpg" alt="2" class="box2">
+    <img src="images/r8.jpg" alt="3" class="box3">
 </div>
+<body>
 <script>
-    var box = document.getElementsByClassName("box1")[0];
-    var color=["red","blue","yellow"];
-    var num=0;
-    box.onclick=function (event) {
-        event.target.style.backgroundColor=color[num];
-        num++;
-        if (num>2){
-            num=0
+    var box = document.getElementsByTagName("img");
+    var img = ["images/r6.jpg", "images/r7.jpg", "images/r8.jpg"];
+    var num = 0;
+    for (var i = 0; i < 3; i++) {
+        box[i].onclick = function (event) {
+            event.target.src = img[num];//指向触发事件的元素
+            num++;
+            if (num > 2) {
+                num = 0
+            }
         }
-        console.log(num)
     }
 </script>
 
