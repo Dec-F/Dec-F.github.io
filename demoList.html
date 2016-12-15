@@ -27,6 +27,10 @@
             width: 100%;
             height: 2000px;
             transform: rotate(30deg);
+            -ms-transform: rotate(30deg); /* IE 9 */
+            -moz-transform: rotate(30deg); /* Firefox */
+            -webkit-transform: rotate(30deg); /* Safari 和 Chrome */
+            -o-transform: rotate(30deg);
             left: -400px;
             top: -1600px;
             /*background-color: dimgray;*/
@@ -39,6 +43,10 @@
             color: #c1c1c1;
             transition: top 20s;
             transform: rotateZ(-90deg);
+            -ms-transform: rotate(-90deg); /* IE 9 */
+            -moz-transform: rotate(-90deg); /* Firefox */
+            -webkit-transform: rotate(-90deg); /* Safari 和 Chrome */
+            -o-transform: rotate(-90deg);
             font-size: 30px;
             letter-spacing: 10px;
         }
@@ -46,10 +54,12 @@
         .is-top {
             top: -500px;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: #c1c1c1;
         }
+
         .hero {
             /*background-color: #0040C1;*/
             position: relative;
@@ -186,6 +196,28 @@
             color: #606160;
         }
 
+        .personal {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+        }
+
+        .personal li {
+            margin-top: 20px;
+            list-style: none;
+            color: white;
+        }
+
+        .personal img {
+            width: 100px;
+            cursor: pointer;;
+        }
+        figure{
+            display: inline-block;
+            text-align: center;
+        }
+
+
 
     </style>
 </head>
@@ -228,11 +260,32 @@
             </li>
         </ul>
     </nav>
+    <div class="personal">
+        <ul>
+            <li>
+                <h2>范学会</h2>
+            </li>
+            <li>
+                <h3>WEB前端工程师</h3>
+            </li>
+            <li>现居地：杭州市西湖区</li>
+            <li>电话：17703668430</li>
+            <li>邮箱：463428221@qq.com</li>
+            <li>
+                <figure>
+                    <figcaption>WeChat</figcaption>
+                    <img src="images/1481777532.png">
+                    <figcaption>WeChat:fanxuehui</figcaption>
+                </figure>
+                <figure>
+                    <figcaption>Github</figcaption>
+                    <img src="images/1481777896.png">
+                    <figcaption><a href="https://github.com/strongfanfan">https://github.com/strongfanfan</a></figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
 </div>
-<h3>
-    <p class="time">
-    </p>
-</h3>
 <script>
     $(function () {
         var span = [],
@@ -270,11 +323,7 @@
         }
 
         setInterval(reSet, 500);
-        for (var k = 0; k < 4; k++) {
-            $('li').eq(k).onClick = function () {
 
-            }
-        }
 
     })
 </script>
