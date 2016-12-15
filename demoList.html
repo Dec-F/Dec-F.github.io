@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width,initial-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut  icon" type="image/x-icon" href="images/favicon.ico" media="screen"/>
     <title>demoList</title>
@@ -14,15 +14,32 @@
             margin: 0;
             padding: 0;
         }
-
-        body {
-            background-color: dimgray;
-            background: url("images/bg_black&white2.jpg") no-repeat;
-            overflow: hidden;
-            position: relative;
-            min-width: 800px;
+        @media screen and (min-width: 1000px){
+            html{
+                font-size: 100px;
+            }
+        }
+        @media screen and (min-width: 640px)and (max-width: 1000px){
+            html{
+                font-size: 80px;
+            }
+        }
+        @media screen and (max-width: 640px){
+            html{
+                font-size: 50px;
+            }
         }
 
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+
+            background-color: dimgray;
+            background: url("images/bg_black&white2.jpg") no-repeat;
+            position: relative;
+            font-size: 0.16rem;
+        }
         .container {
             position: absolute;
             width: 100%;
@@ -164,16 +181,16 @@
             position: absolute;
             top: 0;
             width: 100%;
-            height: 100px;
+            height: 1rem;
             text-align: center;
         }
 
         .demo-list li {
             list-style: none;
             float: left;
-            width: 10%;
+            width: 1rem;
             color: white;
-            font-size: 30px;
+            font-size: 0.3rem;
             vertical-align: middle;
         }
 
@@ -184,12 +201,12 @@
         }
 
         .demo-list li img {
-            width: 55px;
+            width: 0.55rem;
             height: 0;
         }
 
         .demo-list li:hover img {
-            height: 55px;
+            height: 0.55rem;
         }
 
         .demo-list li:hover p {
@@ -199,8 +216,8 @@
 
         .personal {
             position: absolute;
-            top: 20%;
-            left: 5%;
+            top: 20vh;
+            left: 5vw;
         }
 
         .personal li {
@@ -210,81 +227,84 @@
         }
 
         .personal img {
-            width: 100px;
-            cursor: pointer;;
-        }
-        figure{
-            display: inline-block;
-            text-align: center;
+            width: 1rem;
         }
 
+        figure {
+            display: inline-block;
+            text-align: center;
+            width: 1rem;
+        }
 
 
     </style>
 </head>
 <body>
-<div class="container">
-</div>
-<div class="hero">
-    <div class="hero__title"><\Hello World/></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <nav class="demo-list">
-        <ul>
-            <li>
-                <a href="gallery/index.html">
-                    <p>gallery</p>
-                    <img src="images/react.png" alt="react">
-                </a>
-            </li>
-            <li>
-                <a href="photoshop/photoshop.html">
-                    <p>album</p>
-                    <img src="images/html5.png" alt="html5">
-                </a>
-            </li>
-            <li>
-                <a href="lenovo/lenvono.html">
-                    <p>imatate</p>
-                    <img src="images/lenovo-logo.png" alt="lenove">
-                </a>
-            </li>
-            <li>
-                <a href="task10.html">
-                    <p>practice</p>
-                    <img src="images/xzy.png" alt="ptt">
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class="personal">
-        <ul>
-            <li>
-                <h2>范学会</h2>
-            </li>
-            <li>
-                <h3>WEB前端工程师</h3>
-            </li>
-            <li>现居地：杭州市西湖区</li>
-            <li>电话：17703668430</li>
-            <li>邮箱：463428221@qq.com</li>
-            <li>
-                <figure>
-                    <figcaption>WeChat</figcaption>
-                    <img src="images/1481777532.png">
-                    <figcaption>WeChat:fanxuehui</figcaption>
-                </figure>
-                <figure>
-                    <figcaption>Github</figcaption>
-                    <img src="images/1481777896.png">
-                    <figcaption><a href="https://github.com/strongfanfan">https://github.com/strongfanfan</a></figcaption>
-                </figure>
-            </li>
-        </ul>
+<div class="wrap">
+    <div class="container">
+    </div>
+    <div class="hero">
+        <div class="hero__title"><\Hello World/></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <nav class="demo-list">
+            <ul>
+                <li>
+                    <a href="gallery/index.html">
+                        <p>gallery</p>
+                        <img src="images/react.png" alt="react">
+                    </a>
+                </li>
+                <li>
+                    <a href="photoshop/photoshop.html">
+                        <p>album</p>
+                        <img src="images/html5.png" alt="html5">
+                    </a>
+                </li>
+                <li>
+                    <a href="lenovo/lenvono.html">
+                        <p>imatate</p>
+                        <img src="images/lenovo-logo.png" alt="lenove">
+                    </a>
+                </li>
+                <li>
+                    <a href="task10.html">
+                        <p>practice</p>
+                        <img src="images/xzy.png" alt="ptt">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="personal">
+            <ul>
+                <li>
+                    <h2>范学会</h2>
+                </li>
+                <li>
+                    <h3>WEB前端工程师</h3>
+                </li>
+                <li>现居地：杭州市西湖区</li>
+                <li>电话：17703668430</li>
+                <li>邮箱：463428221@qq.com</li>
+                <li>
+                    <figure>
+                        <figcaption>WeChat</figcaption>
+                        <img src="images/1481777532.png">
+                        <figcaption>fanxuehui</figcaption>
+                    </figure>
+                    <figure>
+                        <figcaption>Github</figcaption>
+                        <img src="images/1481777896.png">
+                        <figcaption><a href="https://github.com/strongfanfan">github.com</a>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <script>
