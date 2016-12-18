@@ -205,10 +205,16 @@
             width: 0.55rem;
         }
 
-        .demo-list li:hover img {
-            background-color: #40433e;
-        }
 
+        .screen{
+            position: absolute;
+            top: 27vh;
+            right: 13vw;
+            width: 2rem;
+            height: 1rem;
+            font-size: 20px;
+            color: white;
+        }
 
 
         .personal {
@@ -252,29 +258,35 @@
         <nav class="demo-list">
             <ul>
                 <li>
+                    <a href="strongfanfan.top/RunPig">
+                    <img src="images/pig.png" alt="js写的小游戏，支持移动端重力感应" class="output">
+                    </a>
+                </li>
+                <li>
                     <a href="gallery/index.html">
                         <!--<p>gallery</p>-->
-                        <img src="images/react.png" alt="react">
+                        <img src="images/react.png" alt="使用React+webpack写的简单Webapp" class="output">
                     </a>
                 </li>
                 <li>
                     <a href="photoshop/photoshop.html">
                         <!--<p>album</p>-->
-                        <img src="images/html5.png" alt="html5">
+                        <img src="images/html5.png" alt="使用HTML5+CSS3实现的动画相册" class="output">
                     </a>
                 </li>
                 <li>
                     <a href="lenovo/lenvono.html">
                         <!--<p>imatate</p>-->
-                        <img src="images/lenovo-logo.png" alt="lenove">
+                        <img src="images/lenovo-logo.png" alt="很久前仿写的联想官网" class="output">
                     </a>
                 </li>
                 <li>
                     <a href="task10.html">
                         <!--<p>practice</p>-->
-                        <img src="images/xzy.png" alt="ptt">
+                        <img src="images/xzy.png" alt="很久前用bootstrap写的一个任务demo" class="output">
                     </a>
                 </li>
+                <div class="screen"></div>
             </ul>
         </nav>
         <div class="personal">
@@ -310,10 +322,10 @@
         var span = [],
             spanNode = null,
             container = $('.container');
-        for (var i = 0; i < 200; i++) {
+        for (var i = 0; i < 50; i++) {
             span[i] = document.createElement('span');
             span[i].className = 'dot';
-            span[i].style.left = 10 * (i + 1) + 'px';
+            span[i].style.left = 20 * (i + 1)+800 + 'px';
             if (i % 2) {
                 span[i].isTop = true;
                 span[i].className = ('dot is-top')
@@ -332,16 +344,23 @@
                 text = 0;
 
             for (var j = 0; j < 10; j++) {
-                setNode = getRondom(0, 200);
+                setNode = getRondom(0, 50);
                 text = getRondom(0, 1000).toString(2);
                 spanNode.eq(setNode).text(text);
-                console.log(text);
                 spanNode[setNode].isTop ? spanNode.eq(setNode).removeClass('is-top') : spanNode.eq(setNode).addClass('is-top');
                 spanNode[setNode].isTop = !spanNode[setNode].isTop;
             }
         }
+        for (var k=0;k<5;k++) {
 
-        setInterval(reSet, 500);
+            $('.output').eq(k).bind('mouseenter', function () {
+                $('.screen').text(this.alt)
+            });
+            $(".output").eq(k).bind('mouseleave',function () {
+                $('.screen').text('')
+            })
+        }
+        setInterval(reSet, 2000);
 
 
     })
