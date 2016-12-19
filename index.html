@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!--<meta name="viewport"-->
-          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>范学会</title>
     <style>
@@ -12,7 +12,8 @@
             margin: 0;
             box-sizing: border-box
         }
-        html,body{
+
+        html, body {
             width: 100%;
             height: 100%;
         }
@@ -25,7 +26,6 @@
             position: relative;
         }
 
-
         .left-sec {
             background-color: #222;
             width: 360px;
@@ -36,7 +36,7 @@
             left: 0;
         }
 
-        .left-sec .line{
+        .left-sec .line {
             height: 1px;
             background-color: aliceblue;
             margin: 30px 0;
@@ -54,7 +54,11 @@
         .h3-img {
             margin-top: 50px;
         }
-        .h3-img-2{margin-top: 30px}
+
+        .h3-img-2 {
+            margin-top: 30px
+        }
+
         .left-sec h2, .left-sec h3 {
             width: 100%;
             height: 40px;
@@ -95,8 +99,9 @@
             display: inline-block;
             height: 16px;
             background-color: aliceblue;
-            width: 110px;
-            border-radius: 5px
+            width: 0;
+            border-radius: 5px;
+            transition: width 2s;
         }
 
         .right-sec {
@@ -107,7 +112,7 @@
             width: 840px;
             padding: 20px;
             height: 1034px;
-            background-color:antiquewhite;
+            background-color: antiquewhite;
 
         }
 
@@ -149,7 +154,8 @@
         figure {
             padding: 10px;
         }
-        #we{
+
+        #we {
             width: 150px;
             height: 150px;
             margin: 30px 0 0 300px;
@@ -176,17 +182,17 @@
         <p><span>GitHub：</span><span><a
                 href="https://github.com/strongfanfan">strongfanfan</a></span></p>
         <p class="line"></p>
-        <p><span class="skills">HTML</span><span class="grade-wrap" data-grades="95"><span class="grade"></span></span>
+        <p><span class="skills">HTML</span><span class="grade-wrap"><span class="grade" tabindex="95"></span></span>
         </p>
-        <p><span class="skills">CSS</span><span class="grade-wrap" data-grades="90"><span class="grade"></span></span>
+        <p><span class="skills">CSS</span><span class="grade-wrap"><span class="grade" tabindex="90"></span></span>
         </p>
-        <p><span class="skills">JavaScript</span><span class="grade-wrap" data-grades="85"><span
-                class="grade"></span></span></p>
-        <p><span class="skills">jQuery</span><span class="grade-wrap" data-grades="80"><span
-                class="grade"></span></span></p>
-        <p><span class="skills">Bootstrap</span><span class="grade-wrap" data-grades="85"><span
-                class="grade"></span></span></p>
-        <p><span class="skills">React</span><span class="grade-wrap" data-grades="70"><span class="grade"></span></span>
+        <p><span class="skills">JavaScript</span><span class="grade-wrap"><span
+                class="grade" tabindex="85"></span></span></p>
+        <p><span class="skills">jQuery</span><span class="grade-wrap"><span
+                class="grade" tabindex="80"></span></span></p>
+        <p><span class="skills">Bootstrap</span><span class="grade-wrap"><span
+                class="grade" tabindex="85"></span></span></p>
+        <p><span class="skills">React</span><span class="grade-wrap"><span class="grade" tabindex="70"></span></span>
         </p>
 
     </div>
@@ -212,7 +218,7 @@
         <figure>
             <a href="/RunPig/"><img src="img/pig.png"></a>
             <figcaption>
-                <a href="/Runpig"><h4>RunPig</h4></a>
+                <a href="/RunPig"><h4>RunPig</h4></a>
                 <p>简介：JavaScript写的小游戏</p>
                 <p>使用技术：面向对象，原型继承</p>
             </figcaption>
@@ -231,9 +237,26 @@
             <li>别犹豫了，快把我收到碗里去！</li>
         </ul>
 
-            <img src="img/1481777532.png" id="we">
+        <img src="img/1481777532.png" id="we">
 
     </div>
 </div>
+<script>
+    var gradeNode = document.getElementsByClassName('grade');
+
+    window.onscroll = function () {
+        var bodyTop = document.body.scrollTop;
+        if (bodyTop > 200) {
+            for (var i = 0; i < 6; i++) {
+                gradeNode[i].style.width = gradeNode[i].tabIndex * 2 + 'px';
+                console.log(gradeNode[i].tabIndex)
+            }
+            }else {
+            for (var k=0;k<6;k++){
+                gradeNode[k].style.width=0
+            }
+        }
+    }
+</script>
 </body>
 </html>
