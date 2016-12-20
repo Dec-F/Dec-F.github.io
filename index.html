@@ -245,19 +245,14 @@
 <script>
     var gradeNode = document.getElementsByClassName('grade');
 
-    window.onscroll = function () {
-        var bodyTop = document.body.scrollTop;
-        if (bodyTop > 200) {
-            for (var i = 0; i < 6; i++) {
-                gradeNode[i].style.width = gradeNode[i].tabIndex * 2 + 'px';
-                console.log(gradeNode[i].tabIndex)
-            }
-            }else {
-            for (var k=0;k<6;k++){
-                gradeNode[k].style.width=0
-            }
+
+    window.onload = function () {
+
+        for (var i = 0; i < 6; i++) {
+            gradeNode[i].style.width = gradeNode[i].tabIndex * 2 + 'px';
         }
     }
+
 </script>
 </body>
 </html>
