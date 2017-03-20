@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dec_fan|十二月</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        body {
+            /*background-color: #211d1f;*/
+            height: 100%;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/267285/background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /*overflow: hidden*/
+        }
+        
+        h2 {
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF
+        }
+        
+        .frame {
+            height: 600px;
+            width: 800px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translatex(-50%) translatey(-50%);
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/267285/background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 5px solid #0e0c0d;
+            box-shadow: 10px 10px 200px #000000;
+        }
+        
+        .hands {
+            height: 600px;
+            width: 800px;
+            display: block;
+            position: absolute;
+            z-index: 100;
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/267285/handsfixed.png);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 96%;
+            animation: closer 3s alternate infinite;
+            font-size: 0
+        }
+        
+        .glow {
+            height: 500px;
+            width: 500px;
+            background: radial-gradient(circle, #FFFFFF 0%, rgba(255, 255, 255, .5) 30%, rgba(255, 255, 255, 0) 50%);
+            opacity: .5;
+            position: absolute;
+            z-index: 50;
+            left: 50%;
+            top: 40%;
+            transform: translatex(-50%) translatey(-40%);
+            animation: flicker 2s alternate infinite, float 3s alternate infinite;
+        }
+        
+        .spark {
+            background-color: #1df745;
+            visibility: hidden;
+            position: absolute;
+            opacity: .2;
+            width: 4px;
+            height: 4px;
+            border-radius: 30%;
+            box-shadow: 0 0 5px #ffe763;
+        }
+        .link-blog,.link-github{
+            display: inline-block;
+            width: 50%;
+            color: #EBE3DE;
+            font-size: 16px;
+            margin: 50px 0;
+            line-height: 500px;
+            text-align: center;
+            border-radius: 50%;
+            transition: background-color 5s ,opacity 3s ;
+            opacity: 0;
+            text-decoration: none
+        }
+        .link-blog:hover,.link-github:hover{
+            background-color: rgba(234, 234, 234, .2);
+            opacity: .5
+        }
+        
+        @keyframes closer {
+            0% {
+                background-size: 96%;
+            }
+            100% {
+                background-size: 100%;
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                height: 450px;
+                width: 450px;
+            }
+            100% {
+                height: 600px;
+                width: 600px;
+            }
+        }
+        
+        @keyframes flicker {
+            0%,
+            50%,
+            70% {
+                opacity: .5;
+            }
+            25%,
+            60%,
+            100% {
+                opacity: .35;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Never lost yourself</h2>
+    <div class="frame">
+        <div class="hands">
+            <a href='http://blog.strongfanfan.top' class="link-blog">
+                去往博客
+            </a>
+            <a href= 'https://github.com/strongfanfan' class="link-github">
+                去往github
+            </a>
+        </div>
+        <div class="glow"></div>
+    </div>
+    <!--<script>
+    var density = 50,
+    speed = .5,
+    winHeight = window.innerHeight/2,
+    winWidth = window.innerWidth,
+    start = {
+        yMin: winHeight - 50,
+        yMax: winHeight,
+        xMin: (winWidth / 2) + 10,
+        xMax: (winWidth / 2) + 40,
+        scaleMin: 0.1,
+        scaleMax: 0.25,
+        scaleXMin: 0.1,
+        scaleXMax: 1,
+        scaleYMin: 1,
+        scaleYMax: 2,
+        opacityMin: 0.1,
+        opacityMax: 0.3
+    },
+    mid = {
+        yMin: winHeight * 0.4,
+        yMax: winHeight * 0.9,
+        xMin: winWidth * 0.1,
+        xMax: winWidth * 0.9,
+        scaleMin: 0.2,
+        scaleMax: 0.8,
+        opacityMin: 0.3,
+        opacityMax: 0.4
+    },
+    end = {
+        yMin: -180,
+        yMax: -180,
+        xMin: -100,
+        xMax: winWidth + 180,
+        scaleMin: 0.1,
+        scaleMax: 1,
+        opacityMin: 0.1,
+        opacityMax: 0.4
+    };
+
+function range(map, prop) {
+    var min = map[prop + 'Min'],
+        max = map[prop + 'Max'];
+    return min + (max - min) * Math.random();
+}
+
+function sign() {
+    return Math.random() < 0.5 ? -1 : 1;
+}
+
+function randomEase(easeThis, easeThat) {
+    if (Math.random() < 0.5) {
+        return easeThat;
+    }
+    return easeThis;
+}
+
+function spawn(particle) {
+    var wholeDuration = (10 / speed) * (0.7 + Math.random() * 0.4),
+        delay = wholeDuration * Math.random(),
+        partialDuration = (wholeDuration + 1) * (0.2 + Math.random() * 0.3);
+    TweenLite.set(particle, {
+        y: range(start, 'y'),
+        x: range(start, 'x'),
+        scaleX: range(start, 'scaleX'),
+        scaleY: range(start, 'scaleY'),
+        scale: range(start, 'scale'),
+        opacity: range(start, 'opacity'),
+        visibility: 'hidden'
+    });
+    // Moving upward
+    TweenLite.to(particle, partialDuration, {
+        delay: delay,
+        y: range(mid, 'y'),
+        ease: randomEase(Linear.easeOut, Back.easeInOut)
+    });
+    TweenLite.to(particle, wholeDuration - partialDuration, {
+        delay: partialDuration + delay,
+        y: range(end, 'y'),
+        ease: Back.easeIn
+    });
+    //Moving on axis X
+    TweenLite.to(particle, partialDuration, {
+        delay: delay,
+        x: range(mid, 'x'),
+        ease: Power1.easeOut
+    });
+    TweenLite.to(particle, wholeDuration - partialDuration, {
+        delay: partialDuration + delay,
+        x: range(end, 'x'),
+        ease: Power1.easeIn
+    });
+    //opacity and scale
+    partialDuration = wholeDuration * (0.5 + Math.random() * 0.3);
+    TweenLite.to(particle, partialDuration, {
+        delay: delay,
+        scale: range(mid, 'scale'),
+        autoAlpha: range(mid, 'opacity'),
+        ease: Linear.easeNone
+    });
+    TweenLite.to(particle, wholeDuration - partialDuration, {
+        delay: partialDuration + delay,
+        scale: range(end, 'scale'),
+        autoAlpha: range(end, 'opacity'),
+        ease: Linear.easeNone,
+        onComplete: spawn,
+        onCompleteParams: [particle]
+    });
+}
+window.onload = createParticle;
+
+function createParticle() {
+    var i, particleSpark;
+    for (i = 0; i < density; i += 1) {
+        particleSpark = document.createElement('div');
+        particleSpark.classList.add('spark');
+        document.body.appendChild(particleSpark);
+        spawn(particleSpark);
+    }
+}
+</script>-->
+</body>
+
+</html>
