@@ -25,7 +25,7 @@
             /*overflow: hidden*/
         }
         
-        h2 {
+        h2,h5 {
             padding: 20px;
             text-align: center;
             color: #FFFFFF
@@ -133,12 +133,41 @@
                 opacity: .35;
             }
         }
+        .profile{
+            color: #EBE3DE;
+            font-size: 12px;
+            padding-left: 10px
+        }
+        .icon-link{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('img/link.png') no-repeat center;
+            background-size: contain;
+            vertical-align: -50%;
+            animation: link 2s infinite
+        }
+         @keyframes link {
+             0%{
+                 opacity: .1;
+                 transform: scale(.8)
+             }
+             50%{
+                 opacity: .5;
+                 transform: scale(1)
+             }
+             50%{
+                 opacity: 1;
+                 transform: scale(1.2)
+             }
 
+         }
     </style>
 </head>
 
 <body>
-    <h2>Never lost yourself</h2>
+    <h2>Never lost yourself<a href="/profile.html" class="profile">个人简历</a><i class="icon-link"></i></h2>
+    <h5></h5>
     <div class="frame">
         <div class="hands">
             <a href='http://blog.decfan.top' class="link-blog">
